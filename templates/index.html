@@ -1,0 +1,59 @@
+<!--
+#Copyright 2024 Google LLC
+#Licensed under the Apache License, Version 2.0 (the "License");
+#you may not use this file except in compliance with the License.
+#You may obtain a copy of the License at
+#    https://www.apache.org/licenses/LICENSE-2.0
+#Unless required by applicable law or agreed to in writing, software
+#distributed under the License is distributed on an "AS IS" BASIS,
+#WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#See the License for the specific language governing permissions and
+#limitations under the License.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Analysis with Vertex AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"> 
+
+</head>
+<body>
+  <div style="display: flex; justify-content: center; margin-top:10px;margin-bottom:-20px;">
+    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" 
+         alt="Google Logo" 
+         height="60"> 
+  </div>
+  <h1>Image Analysis with Vertex AI</h1>
+
+  <div class="button-container">
+    <form method="POST" enctype="multipart/form-data">
+      <button type="button" class="custom-file-upload">Upload Image</button> 
+      <input type="file" name="image" id="image-upload" accept="image/*">
+      <button type="submit">Analyze</button>
+    </form>
+  </div>
+    <div class="upload-message-container">
+        <p id="upload-message"></p> 
+    </div>
+
+  <div class="container">
+    {% if image_b64 %}
+    <div class="column">
+      <img class="image-preview" src="data:image/jpeg;base64,{{ image_b64 }}">
+    </div>
+    {% endif %}
+
+    {% if output %}
+    <div class="column">
+      <div class="markdown-output">
+        {{ output | safe }}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+</body>
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</html>

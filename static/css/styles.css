@@ -1,0 +1,119 @@
+/*#Copyright 2024 Google LLC
+#Licensed under the Apache License, Version 2.0 (the "License");
+#you may not use this file except in compliance with the License.
+#You may obtain a copy of the License at
+#    https://www.apache.org/licenses/LICENSE-2.0
+#Unless required by applicable law or agreed to in writing, software
+#distributed under the License is distributed on an "AS IS" BASIS,
+#WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#See the License for the specific language governing permissions and
+#limitations under the License.*/
+
+body {
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    background-color: #f4f4f4; /* Subtle background color */
+    margin: 0; /* Reset default margin */
+  }
+
+  h1 {
+    text-align: center;
+    color: #333; /* Darker heading color */
+    padding: 20px 0; /* Add some padding */
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px; /* Limit container width */
+    margin: 0 auto; /* Center the container */
+  }
+
+  .column {
+    flex: 1;
+    background-color: #fff; /* White background for content */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+
+  .image-preview {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px; /* Rounded image corners */
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .custom-file-upload {
+  display: inline-block;
+  background-color: #007bff; /* Blue background */
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  }
+
+  .custom-file-upload:hover {
+  background-color: #0069d9;
+  /* Darker blue on hover */
+  }
+  .upload-message-container {
+      width:100%;
+      text-align:center;
+  }
+  #image-upload { 
+  display: none; /* Hide the default input */
+  }
+
+  button, 
+  .custom-file-upload { 
+    background-color: #007bff; /* Blue button color */
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+
+  button:hover,
+  .custom-file-upload:hover {
+    background-color: #0069d9; /* Darker blue on hover */
+  }
+
+
+  .markdown-output table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+
+  .markdown-output th,
+  .markdown-output td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .markdown-output th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+  }
+
+  .markdown-output tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .markdown-output tr:hover {
+    background-color: #f0f0f0;
+  }
